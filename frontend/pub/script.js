@@ -4,12 +4,19 @@ const parseJSON = async (url) => {
 }
 
 //kapcsoszárojel, egy objectumból kivonjuk a kulcsokat  (object destructuring)
-const beerComponent = ({title, sub}) => {
+
+
+const beerComponent = ({title, sub, text}) => {
     return `
-    <div>
-        <h1>${title}</h1>
-        <h2>${sub}</h2>
-    </div>
+        <section class="image ${title}"></section>
+        <section class="heading">
+            <h1>${title}</h1>
+        </section>
+        <section class="text">
+            <div class="verticalLine"></div>
+            <h2>${sub}</h2>
+            <h3>${text}</h3>
+        </section>
     `
 }
 
