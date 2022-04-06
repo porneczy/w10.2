@@ -49,20 +49,23 @@ betumeretek: 68 42 26 18 16 14 12 px
 
 body{
     position: relative;
-    background-color: #FFFBF2;
+    background-color: #FFFBF2;    
 }
+
 #root{
-    position: absolute;
+    position: absolute; 
+    
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, 10%);
+    left: 50%;  
+    transform: translate(-50%, 10%);  
+    width: 80vw;
+    height: 80vh;
 
     font-family: 'Space Mono', monospace;
     font-weight: 400;
     background-color: #FFFBF2;
     color: #2e2e2e;
-    width: 80vw;
-    height: 80vh;
+    
     overflow: hidden;
     overflow-y: auto;
     perspective: 3px;
@@ -84,6 +87,31 @@ body{
     background-color: #FDB913;
 }
 
+/* static filter */
+.staticFilter {
+    position: fixed;
+    right: -50%;
+    bottom: -50%;
+    width: 200%;
+    height: 200vh;
+    background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
+    background-repeat: repeat;
+    animation: staticFilterAnimation .2s infinite;
+    opacity: 1;
+}
+.staticFilter2 {
+    position: absolute;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    width: 200%;
+    height: 170vh;
+    background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
+    background-repeat: repeat;
+    animation: staticFilterAnimation .2s infinite;
+    opacity: 1;
+}
+
 section {
     position: relative;
     display: flex;
@@ -99,7 +127,6 @@ section {
     background-size: cover;
     z-index: -1;
     height: 100vh;
-    
 }
 .heading {
       z-index: -1;
@@ -114,6 +141,7 @@ h1{
     font-size: 68px;
     color: #FDB913;
     max-width: 500px;
+    -webkit-text-stroke: 2px #2e2e2e;
 }
 h2{
     font-size: 42px;
@@ -193,10 +221,20 @@ hr.horizontalLine {
 }
 
 
-
-
-
-
+/* for static filter */
+@keyframes staticFilterAnimation {
+    0% { transform: translate(0,0) }
+    10% { transform: translate(-5%,-5%) }
+    20% { transform: translate(-10%,5%) }
+    30% { transform: translate(5%,-10%) }
+    40% { transform: translate(-5%,15%) }
+    50% { transform: translate(-10%,5%) }
+    60% { transform: translate(15%,0) }
+    70% { transform: translate(0,10%) }
+    80% { transform: translate(-15%,0) }
+    90% { transform: translate(10%,5%) }
+    100% { transform: translate(5%,0) }
+}
 
 
 

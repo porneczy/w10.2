@@ -5,6 +5,13 @@ const parseJSON = async (url) => {
 
 //kapcsoszárojel, egy objectumból kivonjuk a kulcsokat  (object destructuring)
 
+const plusComponentForDesign = () => {
+    return `
+        <div class="verticalLine"></div>
+        <hr class="horizontalLine">
+        <div class="staticFilter"></div>
+    `
+}
 
 const beerComponent = ({title, sub, text}) => {
     return `
@@ -13,6 +20,7 @@ const beerComponent = ({title, sub, text}) => {
             <h1>${title}</h1>
         </section>
         <section class="text">
+            <div class="staticFilter2"></div>
             <div class="verticalLine"></div>
             <h2>${sub}</h2>
             <h3>${text}</h3>
@@ -21,9 +29,12 @@ const beerComponent = ({title, sub, text}) => {
 }
 
 const loadEvent = async () => {
+    const bodyElement = document.querySelector('body');
     const rootElement = document.getElementById("root");
     const result = await parseJSON("/beers")
     
+    bodyElement.insertAdjacentHTML('afterbegin', plusComponentForDesign())
+
     rootElement.insertAdjacentHTML(
         'beforeend',
         result.cards.map( beer => beerComponent(beer) ).join("")
