@@ -21,9 +21,14 @@ const beerComponent = ({title, sub, text}) => {
         </section>
         <section class="text">
             <div class="staticFilter2"></div>
-            <div class="verticalLine"></div>
-            <h2>${sub}</h2>
-            <h3>${text}</h3>
+            <div class="textLine">
+                <p class="mark1">„</p>
+                <div>
+                    <h2>${sub}</h2>
+                    <h3>${text}</h3>
+                </div>
+                <p class="mark2">”</p>
+            </div>
         </section>
     `
 }

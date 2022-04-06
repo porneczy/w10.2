@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     border: 0;
@@ -7,9 +7,11 @@
     background: transparent;
     font-family: inherit;
 }
-a{
+
+a {
     text-decoration: none;
 }
+
 a img {
     border: none;
 }
@@ -30,6 +32,7 @@ select {
     appearance: none !important;
     border-radius: 0;
 }
+
 /*END OF CSS RESET*/
 
 /* 
@@ -47,17 +50,17 @@ szinek:
 betumeretek: 68 42 26 18 16 14 12 px
 */
 
-body{
+body {
     position: relative;
-    background-color: #FFFBF2;    
+    background-color: #FFFBF2;
 }
 
-#root{
-    position: absolute; 
-    
+#root {
+    position: absolute;
+
     top: 50%;
-    left: 50%;  
-    transform: translate(-50%, 10%);  
+    left: 50%;
+    transform: translate(-50%, 10%);
     width: 80vw;
     height: 80vh;
 
@@ -65,7 +68,7 @@ body{
     font-weight: 400;
     background-color: #FFFBF2;
     color: #2e2e2e;
-    
+
     overflow: hidden;
     overflow-y: auto;
     perspective: 3px;
@@ -79,11 +82,12 @@ body{
 #root::-webkit-scrollbar {
     width: 20px;
 }
+
 #root::-webkit-scrollbar-track {
     background-color: #2e2e2e;
-} 
+}
+
 #root::-webkit-scrollbar-thumb {
-    
     background-color: #FDB913;
 }
 
@@ -112,6 +116,7 @@ body{
     opacity: 1;
 }
 
+/*térbiszbaszok*/
 section {
     position: relative;
     display: flex;
@@ -120,36 +125,55 @@ section {
     flex-direction: column;
     background-size: cover;
 }
+    .image {
+        background-position: center center;
+        transform: translateZ(-1px) scale(1.5);
+        background-size: cover;
+        z-index: -1;
+        height: 100vh;
+    }
+    .heading {
+        z-index: -1;
+        transform: translateY(-30vh) translateZ(1px) scale(1.5);
+    }
+    .text {
+        height: 50vh;
+        background-color: #FFFBF2;
+    }
 
-.image {
-    background-position: center center;
-    transform: translateZ(-1px) scale(1.5);
-    background-size: cover;
-    z-index: -1;
-    height: 100vh;
+/* text format*/
+.textLine {
+    display: flex;
+    justify-content: space-between;
+    padding: 3vw;
+    width: 70%;
+    text-align: center;
+    border-top: #2e2e2e solid 2px;
+    border-bottom: #2e2e2e solid 2px;
 }
-.heading {
-      z-index: -1;
-      transform: translateY(-30vh) translateZ(1px) scale(1.5);
-}
-.text {
-      height: 50vh;
-      background-color: #FFFBF2;
-}
-
-h1{
+h1 {
     font-size: 68px;
     color: #FDB913;
     max-width: 500px;
     -webkit-text-stroke: 2px #2e2e2e;
 }
-h2{
+h2 {
     font-size: 42px;
     color: #2e2e2e;
 }
-h3{
+h3 {
     font-size: 26px;
     color: #717171;
+}
+p {
+    font-size: 68px;
+    color: #2e2e2e;
+}
+.mark1 {
+    transform: translateY(40px);
+}
+.mark2 {
+    transform: translateY(-40px);
 }
 
 
@@ -169,52 +193,52 @@ hr.horizontalLine {
 }
 
 /* img for all beers */
-.Mango{
+.Mango {
     background-image: url("https://ol2go.dk/wp-content/uploads/2021/07/Mad-Scientist-Mango-Bay.png");
     background-color: #fdbb1365;
     background-blend-mode: darken;
 }
-.Galaxis{
+.Galaxis {
     background-image: url("http://magyarkonyhaonline.hu/storage/media/thumbnails/2020/06/19/rothbeer_6-770x_.jpg?token=a810d3bd7e34730b1026eb6e0245eca5");
     background-color: #fdbb1365;
     background-blend-mode: darken;
 }
-.Flying{
+.Flying {
     background-image: url("http://magyarkonyhaonline.hu/storage/media/thumbnails/2020/07/31/monyo_10-770x_.jpg?token=4b8531668857ee273598775c98833970");
     background-color: #fdbb1365;
     background-blend-mode: darken;
 }
-.Liquid{
+.Liquid {
     background-image: url("https://madscientist.hu/wp-content/uploads/2020/03/Tanult-Tehetetlens%C3%A9g_-6-pack.jpg");
     background-color: #fdbb1365;
     background-blend-mode: darken;
 }
-.Organic{
+.Organic {
     background-image: url("https://manboxeo.cz/media/thumbs/mb-df/products-photos/97/8572-samuel-smith-organic-chocolate-stout-0-355-l-gb.fa6.jpg.be9dd.jpg");
     background-color: #fdbb1365;
     background-blend-mode: darken;
 }
-.Bracia{
+.Bracia {
     background-image: url("https://tickernews.co/wp-content/uploads/2022/02/Putin-to-the-rescue.jpg");
     background-color: #fdbb1365;
     background-blend-mode: darken;
 }
-.Oatmeal{
+.Oatmeal {
     background-image: url("https://frankaboutbeer.files.wordpress.com/2017/04/img_5680.jpg?w=1084");
     background-color: #fdbb1365;
     background-blend-mode: darken;
 }
-.Black{
+.Black {
     background-image: url("https://live.staticflickr.com/6182/6122455965_8152a5f4d5_b.jpg");
     background-color: #fdbb1365;
     background-blend-mode: darken;
 }
-.Vintage{
+.Vintage {
     background-image: url("https://beertoday.co.uk/wp-content/uploads/2021/10/Fullers-Vintage-Ale-2021.jpg");
     background-color: #fdbb1365;
     background-blend-mode: darken;
 }
-.Leaves{
+.Leaves {
     background-image: url("https://i0.wp.com/quaff-magazine.com/wp-content/uploads/2019/10/test-biere-tempest-brewing-all-the-leaves-are-brown-quaff-1.jpg");
     background-color: #fdbb1365;
     background-blend-mode: darken;
@@ -223,20 +247,15 @@ hr.horizontalLine {
 
 /* for static filter */
 @keyframes staticFilterAnimation {
-    0% { transform: translate(0,0) }
-    10% { transform: translate(-5%,-5%) }
-    20% { transform: translate(-10%,5%) }
-    30% { transform: translate(5%,-10%) }
-    40% { transform: translate(-5%,15%) }
-    50% { transform: translate(-10%,5%) }
-    60% { transform: translate(15%,0) }
-    70% { transform: translate(0,10%) }
-    80% { transform: translate(-15%,0) }
-    90% { transform: translate(10%,5%) }
-    100% { transform: translate(5%,0) }
+    0% {transform: translate(0, 0)}
+    10% {transform: translate(-5%, -5%)}
+    20% {transform: translate(-10%, 5%)}
+    30% {transform: translate(5%, -10%)}
+    40% {transform: translate(-5%, 15%)}
+    50% {transform: translate(-10%, 5%)}
+    60% {transform: translate(15%, 0)}
+    70% {transform: translate(0, 10%)}
+    80% {transform: translate(-15%, 0)}
+    90% {transform: translate(10%, 5%)}
+    100% {transform: translate(5%, 0)}
 }
-
-
-
-
-
