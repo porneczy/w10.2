@@ -12,7 +12,7 @@ app.get('/', (req, res, next) => {
 });
 
 app.get("/beers", (req, res) => {
-	res.sendFile(path.join(`${__dirname}/../frontend/beers.json`));
+	res.sendFile(path.join(`${__dirname}/../frontend/pub/beers.json`));
 })
 
 
